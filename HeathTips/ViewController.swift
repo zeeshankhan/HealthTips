@@ -12,14 +12,45 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
 }
+
+extension ViewController : UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10;
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell : TipsTableViewCell = tableView.dequeueReusableCell(withIdentifier: TipsTableViewCell.reusableIdentifier, for: indexPath) as! TipsTableViewCell
+
+        cell.textLabel?.text = String("Row \(indexPath.row)")
+
+        return cell
+
+    }
+}
+
+class TipsTableViewCell : UITableViewCell {}
+
+protocol ReusableCell: class {
+    static var reusableIdentifier: String { get }
+}
+
+extension ReusableCell where Self: UIView {
+    static var reusableIdentifier: String {
+        return String(describing: self)
+    }
+}
+
+extension UITableViewCell : ReusableCell {}
+
+
 
