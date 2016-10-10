@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  HeathTips
 //
-//  Created by Zeeshan Khan on 10/5/16.
+//  Created by Zeeshan Khan on 10/10/16.
 //  Copyright © 2016 Zeeshan. All rights reserved.
 //
 
@@ -52,5 +52,5 @@ extension ReusableCell where Self: UIView {
 
 extension UITableViewCell : ReusableCell {}
 
-
+// http://alisoftware.github.io/swift/generics/2016/01/06/generic-tableviewcells/
 
