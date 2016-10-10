@@ -12,6 +12,10 @@
 		B3F27BB81DAB64A100FB3E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F27BB61DAB64A100FB3E0A /* Main.storyboard */; };
 		B3F27BBA1DAB64A100FB3E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F27BB91DAB64A100FB3E0A /* Assets.xcassets */; };
 		B3F27BBD1DAB64A100FB3E0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F27BBB1DAB64A100FB3E0A /* LaunchScreen.storyboard */; };
+		B3F27BC61DAB6B2B00FB3E0A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F27BC51DAB6B2B00FB3E0A /* RealmSwift.framework */; };
+		B3F27BC91DAB6D7300FB3E0A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F27BC81DAB6D7300FB3E0A /* Realm.framework */; };
+		B3F27BCB1DAB701D00FB3E0A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F27BCA1DAB701D00FB3E0A /* DataModel.swift */; };
+		B3F27BCD1DAB750F00FB3E0A /* Tips.csv in Resources */ = {isa = PBXBuildFile; fileRef = B3F27BCC1DAB750F00FB3E0A /* Tips.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		B3F27BB91DAB64A100FB3E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3F27BBC1DAB64A100FB3E0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3F27BBE1DAB64A100FB3E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F27BC51DAB6B2B00FB3E0A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		B3F27BC81DAB6D7300FB3E0A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		B3F27BCA1DAB701D00FB3E0A /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		B3F27BCC1DAB750F00FB3E0A /* Tips.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tips.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F27BC91DAB6D7300FB3E0A /* Realm.framework in Frameworks */,
+				B3F27BC61DAB6B2B00FB3E0A /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				B3F27BB11DAB64A100FB3E0A /* HealthTips */,
 				B3F27BB01DAB64A100FB3E0A /* Products */,
+				B3F27BC41DAB6B2B00FB3E0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +67,23 @@
 			children = (
 				B3F27BB21DAB64A100FB3E0A /* AppDelegate.swift */,
 				B3F27BB41DAB64A100FB3E0A /* ViewController.swift */,
+				B3F27BCA1DAB701D00FB3E0A /* DataModel.swift */,
 				B3F27BB61DAB64A100FB3E0A /* Main.storyboard */,
 				B3F27BB91DAB64A100FB3E0A /* Assets.xcassets */,
 				B3F27BBB1DAB64A100FB3E0A /* LaunchScreen.storyboard */,
 				B3F27BBE1DAB64A100FB3E0A /* Info.plist */,
+				B3F27BCC1DAB750F00FB3E0A /* Tips.csv */,
 			);
 			path = HealthTips;
+			sourceTree = "<group>";
+		};
+		B3F27BC41DAB6B2B00FB3E0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3F27BC81DAB6D7300FB3E0A /* Realm.framework */,
+				B3F27BC51DAB6B2B00FB3E0A /* RealmSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +96,7 @@
 				B3F27BAB1DAB64A100FB3E0A /* Sources */,
 				B3F27BAC1DAB64A100FB3E0A /* Frameworks */,
 				B3F27BAD1DAB64A100FB3E0A /* Resources */,
+				B3F27BC71DAB6B5B00FB3E0A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -126,11 +149,30 @@
 			files = (
 				B3F27BBD1DAB64A100FB3E0A /* LaunchScreen.storyboard in Resources */,
 				B3F27BBA1DAB64A100FB3E0A /* Assets.xcassets in Resources */,
+				B3F27BCD1DAB750F00FB3E0A /* Tips.csv in Resources */,
 				B3F27BB81DAB64A100FB3E0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3F27BC71DAB6B5B00FB3E0A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3F27BAB1DAB64A100FB3E0A /* Sources */ = {
@@ -139,6 +181,7 @@
 			files = (
 				B3F27BB51DAB64A100FB3E0A /* ViewController.swift in Sources */,
 				B3F27BB31DAB64A100FB3E0A /* AppDelegate.swift in Sources */,
+				B3F27BCB1DAB701D00FB3E0A /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +210,7 @@
 		B3F27BBF1DAB64A100FB3E0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -216,6 +260,7 @@
 		B3F27BC01DAB64A100FB3E0A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -258,8 +303,13 @@
 		B3F27BC21DAB64A100FB3E0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D4S2X6D6DH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HealthTips/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zeeshan.HealthTips;
@@ -271,8 +321,13 @@
 		B3F27BC31DAB64A100FB3E0A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D4S2X6D6DH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HealthTips/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zeeshan.HealthTips;
@@ -300,6 +355,7 @@
 				B3F27BC31DAB64A100FB3E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

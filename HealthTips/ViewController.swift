@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let tips: [Tip] = DataModel().getData()
+//    @IBOutlet var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,17 +23,22 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController : UITableViewDataSource {
+extension ViewController : UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return tips.count;
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell : TipsTableViewCell = tableView.dequeueReusableCell(withIdentifier: TipsTableViewCell.reusableIdentifier, for: indexPath) as! TipsTableViewCell
 
-        cell.textLabel?.text = String("Row \(indexPath.row)")
+        cell.textLabel?.text = tips[indexPath.row].text
+        cell.textLabel?.numberOfLines = 0
 
         return cell
 
