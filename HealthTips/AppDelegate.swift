@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  HeathTips
+//  HealthTips
 //
-//  Created by Zeeshan Khan on 10/5/16.
+//  Created by Zeeshan Khan on 10/10/16.
 //  Copyright © 2016 Zeeshan. All rights reserved.
 //
 

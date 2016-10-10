@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GN4-CP-1Cd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="r8N-Aa-HWs">
+            <objects>
+                <viewController id="GN4-CP-1Cd" customClass="ViewController" customModule="HeathTips" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LLL-Mk-bX6"/>
+                        <viewControllerLayoutGuide type="bottom" id="zLx-59-fU4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="629-M3-d7h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iho-bk-BE6">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TipsTableViewCell" id="0ej-Mu-hhO" customClass="TipsTableViewCell" customModule="HeathTips" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ej-Mu-hhO" id="0oE-mP-Lgg">
+                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GN4-CP-1Cd" id="xgW-Es-aZO"/>
+                                    <outlet property="delegate" destination="GN4-CP-1Cd" id="eoA-hi-2l0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Iho-bk-BE6" secondAttribute="trailing" id="L0r-4u-ajB"/>
+                            <constraint firstItem="Iho-bk-BE6" firstAttribute="top" secondItem="629-M3-d7h" secondAttribute="top" id="gWZ-K5-Agy"/>
+                            <constraint firstItem="zLx-59-fU4" firstAttribute="top" secondItem="Iho-bk-BE6" secondAttribute="bottom" id="rn7-NT-xif"/>
+                            <constraint firstItem="Iho-bk-BE6" firstAttribute="leading" secondItem="629-M3-d7h" secondAttribute="leading" id="wfN-gt-0hn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQs-Kt-Vs7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="102.09895052473765"/>
+        </scene>
+    </scenes>
+</document>
